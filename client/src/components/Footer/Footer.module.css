@@ -1,0 +1,49 @@
+.footer {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5%;
+    height: 4rem;
+    width: 100%;
+}
+
+.footer a div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.footer a div svg {
+    height: 2rem;
+    width: 2rem;
+    transition: transform .2s ease-in-out;
+}
+
+.footer a div svg:hover  {
+    transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 480px) {
+    .footer a div svg {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .footer a div svg {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+}
+
+/* @media only screen and (min-width: 1200px) {
+    .footer {
+        height: 5rem;
+    }
+    .footer a div svg {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+} */

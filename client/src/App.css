@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #171717;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}

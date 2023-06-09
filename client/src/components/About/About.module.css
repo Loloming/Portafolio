@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+
+.about_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    background: rgb(34,34,34);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(55,55,55,1) 35%, rgba(34,34,34,1) 100%);
+    border-radius: 0% 0% 10% 10%;
+}
+
+.about_section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    height: 50%;
+}
+
+.about_text {
+    font-family: 'Oxanium', cursive;
+    font-size: 6vh;
+    user-select: none;
+    background: -webkit-linear-gradient(0deg, #ff6200, #ffdd00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about_introduction {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+.tech_stack {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    /* width: 100%; */
+    padding-top: 1.3rem;
+    margin-bottom: 3rem;
+    flex-direction: row;
+    color: #f1f1f1;
+}
+
+.tech_stack h6 {
+    font-family: 'Tomorrow', sans-serif;
+    border-right: solid 1px #f1f1f1;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    font-size: 3.3vh;
+    color: #f1f1f1;
+}
+
+.tech_stack li{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    align-items: center;
+    color: #f1f1f1;
+}
+
+.box_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #222;
+    border-radius: 100%;
+}
+
+.box_round :hover {
+    transform: scale(1.15);
+}
+
+.tech_stack li div p {
+    position: relative;
+    user-select: none;
+    opacity: 0;
+    visibility: hidden;
+    height: 0px;
+    font-family: 'Commissioner', sans-serif;
+    transition: opacity .5s, visibility .5s;
+}
+
+.tech_stack li div:hover > p {
+    position: relative;
+    visibility: visible;
+    opacity: 100;
+    height: 0px;
+    font-family: 'Commissioner', sans-serif;
+}
+
+#tech_box {
+    display: flex;
+    position: relative;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#react {
+    background-image: url("../../assets/react-icon.png");
+    background-size: cover;
+    background-position: center;
+    width: 6vh;
+    height: 6vh;
+    transition: transform .3s ease;
+}
+
+#nodejs {
+    background-image: url("../../assets/nodejs-icon.png");
+    background-size: cover;
+    background-position: center;
+    width: 6vh;
+    height: 6.7vh;
+    transition: transform .3s ease;
+}
+
+#redux {
+    background-image: url("../../assets/redux-icon.png");
+    background-size: cover;
+    background-position: center;
+    width: 6vh;
+    height: 6vh;
+    transition: transform .3s ease;
+}
+
+#sequelize {
+    background-image: url("../../assets/sequelize-icon.png");
+    background-size: cover;
+    background-position: center;
+    width: 6vh;
+    height: 6vh;
+    transition: transform .3s ease;
+}
+
+#socket {
+    background-image: url("../../assets/socket-io-icon.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 100%;
+    outline: solid 2px #000;
+    width: 6vh;
+    height: 6vh;
+    transition: transform .3s ease;
+}
+
+#typescript {
+    background-image: url("../../assets/typescript-icon.png");
+    background-size: cover;
+    background-position: center;
+    width: 6vh;
+    height: 6vh;
+    transition: transform .3s ease;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 300px){
+
+    .about_container {
+        padding-top: 2rem;
+        justify-content: space-evenly;
+    }
+    
+    .about_section {
+        padding-top: 0rem;
+        padding-left: 1rem;
+    }
+
+    .about_text {
+        font-size: 2rem;
+        width: 80%;
+    }
+    
+    .about_introduction {
+        font-family: 'DotGothic16', sans-serif;
+        font-size: .7rem;
+        font-weight: 500;
+        color: #f1f1f1;
+    }
+    
+    .tech_stack {
+        gap: 0%;
+        padding-top: 0rem;
+        width: 90%;
+        height: 7rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    
+    .tech_stack h6 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tech_stack li{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        gap: 0%;
+        align-items: center;
+        justify-content: space-around;
+        color: #f1f1f1;
+    }
+
+    .tech_stack li div p {
+        visibility: visible;
+        opacity: 100;
+        font-size: .7rem;
+        margin-bottom: .5rem;
+    }
+
+    .box_round {
+        width: 2rem;
+        height: 2rem;
+        margin: .5rem;
+        margin-right: .7rem;
+    }
+
+    #react {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    #nodejs {
+        width: 1rem;
+        height: 1.9rem;
+    }
+    
+    #redux {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    #sequelize {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    #socket {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    #typescript {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .about_text {
+        font-size: 2.5rem;
+    }
+
+    .about_introduction {
+        font-size: 1rem;
+    }
+
+    .tech_stack {
+        gap: 0%;
+        padding-top: 0rem;
+        width: 90%;
+        height: 7rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    
+    .tech_stack h6 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tech_stack li{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        gap: 0%;
+        align-items: center;
+        justify-content: space-around;
+        color: #f1f1f1;
+    }
+
+    .tech_stack li div p {
+        visibility: visible;
+        opacity: 100;
+        font-size: .7rem;
+        margin-bottom: .5rem;
+    }
+
+    .box_round {
+        width: 3rem;
+        height: 3rem;
+        margin: .5rem;
+        margin-right: .7rem;
+    }
+
+    #react {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    #nodejs {
+        width: 2rem;
+        height: 2.3rem;
+    }
+    
+    #redux {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    #sequelize {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    #socket {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    #typescript {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .about_text {
+        font-size: 4rem;
+    }
+
+    .about_introduction {
+        font-size: 1.3rem;
+    }
+
+    .tech_stack {
+        gap: 0%;
+        padding-top: 0rem;
+        width: 90%;
+        height: 7rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    
+    .tech_stack h6 {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tech_stack li{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        gap: 0%;
+        align-items: center;
+        justify-content: space-around;
+        color: #f1f1f1;
+    }
+
+    .tech_stack li div p {
+        visibility: visible;
+        opacity: 100;
+        font-size: 1rem;
+        margin-bottom: .5rem;
+        margin-right: .5rem;
+        margin-left: .5rem;
+    }
+
+    .box_round {
+        width: 3.8rem;
+        height: 3.8rem;
+        margin: .5rem;
+        margin-right: .7rem;
+    }
+
+    #react {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    #nodejs {
+        width: 2.5rem;
+        height: 2.3rem;
+    }
+    
+    #redux {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    #sequelize {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    #socket {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    #typescript {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* @media only screen and (min-width:1200px) {
+    .about_text {
+        font-size: 5rem;
+    }
+
+    .about_introduction {
+        font-size: 1.7rem;
+    }
+
+    .tech_stack {
+        margin-bottom: 3.5rem;
+    }
+    
+    .tech_stack h6 {
+        font-size: 3rem;
+    }
+
+    .box_round {
+        width: 6.5rem;
+        height: 6.5rem;
+        margin: .5rem;
+        margin-right: .7rem;
+    }
+
+    .tech_stack li div p {
+        font-size: 1.5rem;
+    }
+} */

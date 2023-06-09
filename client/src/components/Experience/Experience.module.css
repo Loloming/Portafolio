@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@600&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: -webkit-linear-gradient(0deg, #171717, #111, #171717);
+    height: fit-content;
+    width: 100%;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.lines {
+    height: .3rem;
+    width: 30%;
+    background: -webkit-linear-gradient(0deg, #ff9100, #a600ff);
+}
+
+.experience {
+    display: flex;
+    user-select: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.divider {
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience h2 {
+    font-family: 'Tomorrow', sans-serif;
+    margin-right: .8rem;
+    margin-left: .8rem;
+    font-size: 3.3rem;
+    background: -webkit-linear-gradient(0deg, #a600ff, #ff9100);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .experience h2 {
+        font-size: 2rem;
+    }
+
+    .lines {
+        height: .2rem;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .experience h2 {
+        font-size: 2.5rem;
+    }
+
+    .lines {
+        height: .3rem;
+    }
+}
+
+/* @media only screen and (min-width: 1200px) {
+    .experience h2 {
+        font-size: 5.3rem;
+    }
+
+    .lines {
+        height: .7rem;
+    }
+} */

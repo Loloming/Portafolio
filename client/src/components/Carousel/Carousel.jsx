@@ -26,7 +26,7 @@ export default function Carousel(props) {
   return (
     <div className={styles.carousel_container}>
       <div className={styles.carousel_wrapper}>
-        <button onClick={prev} className={currentIndex !== 0 && styles.left || styles.left_disabled}></button>
+        <button onClick={prev} className={currentIndex > 0 && styles.left || styles.left_disabled}></button>
         <div className={styles.carousel_content_wrapper}>
           <div
             className={styles.carousel_content}
@@ -35,7 +35,7 @@ export default function Carousel(props) {
             {children}
           </div>
         </div>
-        <button onClick={next} className={currentIndex + 1 !== length && styles.right || styles.right_disabled}></button>
+        <button onClick={next} className={currentIndex + 1 < length && styles.right || styles.right_disabled}></button>
       </div>
     </div>
   );

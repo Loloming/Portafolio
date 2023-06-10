@@ -68,7 +68,7 @@ export default function Header() {
         )}
       </header>
       {modal && (
-        <section className={styles.modal}>
+        <section onClick={() => setModal(!modal)} className={styles.modal}>
           <ul className={styles.header_list}>
             <p
               onClick={() => {

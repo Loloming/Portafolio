@@ -171,16 +171,16 @@
     }
 
     .card_image {
-        height: 6rem;
+        height: 12rem;
     }
 
     .card_name {
-        font-size: .7rem;
+        font-size: .8rem;
         text-align: center;
     }
 
     .card_description {
-        font-size: .6rem;
+        font-size: .7rem;
         margin-bottom: .5rem;
     }
 
@@ -193,7 +193,7 @@
     }
 
     .card_technology {
-        font-size: .5rem;
+        font-size: .6rem;
     }
 
     .technologies_container {
@@ -202,15 +202,10 @@
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    .card_container {
-        width: 60%;
-    }
-}
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
     .card_container {
-        width: 60%;
+        width: 80%;
         height: fit-content;
     }
 
@@ -219,15 +214,15 @@
     }
 
     .card_image {
-        height: 6rem;
+        height: 15rem;
     }
 
     .card_name {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .card_description {
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
     .anchor {

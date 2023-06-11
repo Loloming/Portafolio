@@ -165,7 +165,7 @@
     transition: transform .3s ease;
 }
 
-@media only screen and (max-width: 299px)  {
+@media only screen and (max-width: 305px)  {
 
     .about_container {
         padding-top: 2rem;
@@ -260,7 +260,7 @@
     }
 }
 
-@media only screen and (max-width: 480px) and (min-width: 300px){
+@media only screen and (max-width: 480px) and (min-width: 306px){
 
     .about_container {
         padding-top: 2rem;
@@ -331,7 +331,7 @@
     
     #nodejs {
         width: 1rem;
-        height: 1.9rem;
+        height: 1.2rem;
     }
     
     #redux {
@@ -355,8 +355,7 @@
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-
+@media only screen and (min-width: 481px) and (max-width: 520px) {
     .about_text {
         font-size: 2.5rem;
     }
@@ -399,40 +398,120 @@
     }
 
     .box_round {
-        width: 3rem;
-        height: 3rem;
+        width: 2.2rem;
+        height: 2.2rem;
         margin: .5rem;
         margin-right: .7rem;
     }
 
     #react {
-        width: 2rem;
-        height: 2rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
     
     #nodejs {
-        width: 2rem;
-        height: 2.3rem;
+        width: 1.4rem;
+        height: 1.6rem;
     }
     
     #redux {
-        width: 2rem;
-        height: 2rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
     
     #sequelize {
-        width: 2rem;
-        height: 2rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
     
     #socket {
-        width: 2rem;
-        height: 2rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
     
     #typescript {
-        width: 2rem;
-        height: 2rem;
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 768px) {
+    .about_text {
+        font-size: 2.5rem;
+    }
+
+    .about_introduction {
+        font-size: 1rem;
+    }
+
+    .tech_stack {
+        gap: 0%;
+        padding-top: 0rem;
+        width: 90%;
+        height: 7rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    
+    .tech_stack h6 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tech_stack li{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        gap: 0%;
+        align-items: center;
+        justify-content: space-around;
+        color: #f1f1f1;
+    }
+
+    .tech_stack li div p {
+        visibility: visible;
+        opacity: 100;
+        font-size: .7rem;
+        margin-bottom: .5rem;
+    }
+
+    .box_round {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: .5rem;
+        margin-right: .7rem;
+    }
+
+    #react {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    
+    #nodejs {
+        width: 1.6rem;
+        height: 1.9rem;
+    }
+    
+    #redux {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    
+    #sequelize {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    
+    #socket {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    
+    #typescript {
+        width: 1.6rem;
+        height: 1.6rem;
     }
 }
 

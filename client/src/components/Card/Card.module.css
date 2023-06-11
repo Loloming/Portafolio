@@ -43,15 +43,13 @@
 
 .technologies_container {
     display: flex;
-    height: 4rem;
     width: 100%;
-    margin-bottom: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     flex-wrap: wrap;
-    transition: transform 1s ease-out;
-    justify-content: center;
-    align-items: end;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
-    gap: 10%;
     transition: transform 3s ease-in-out;
 }
 
@@ -62,7 +60,7 @@
     margin-bottom: .3rem;
     user-select: none;
     border-radius: .3rem;
-    transition: transform 1s ease-out;
+    transition: transform .2s ease-out;
     background: -webkit-linear-gradient(0deg, #ae00ff, #ffae00);
     -webkit-background-clip: text;
     background-clip: text;
@@ -75,7 +73,7 @@
 }
 
 .technologies_container :hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .heading {

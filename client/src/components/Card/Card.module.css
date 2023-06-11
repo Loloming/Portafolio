@@ -130,13 +130,13 @@
     }
 
     .card_name {
-        font-size: .5rem;
+        font-size: .6rem;
         margin-bottom: .3rem;
         text-align: center;
     }
 
     .card_description {
-        font-size: .4rem;
+        font-size: .6rem;
         margin-bottom: .5rem;
     }
 
@@ -149,7 +149,7 @@
     }
 
     .card_technology {
-        font-size: .4rem;
+        font-size: .5rem;
     }
 
     .technologies_container {

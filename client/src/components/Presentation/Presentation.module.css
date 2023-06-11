@@ -294,7 +294,7 @@
     }
   }
 
-  @media only screen and (max-width: 400px)  and (min-width: 365px) {
+  @media only screen and (max-width: 408px)  and (min-width: 365px) {
     .section_container{
         height: 16.5rem;
     }
@@ -325,7 +325,7 @@
   }
 
 
-  @media only screen and (max-width: 480px) and (min-width: 400px) {
+  @media only screen and (max-width: 480px) and (min-width: 408px) {
     .section_container{
         height: 17.5rem;
     }

@@ -1,0 +1,94 @@
+---
+import Particles from "astro-particles"
+import type { ISourceOptions } from "tsparticles-engine";
+
+const options: ISourceOptions = {
+          fullScreen: {
+       		enable: true,
+        	zIndex: -1
+    	  },
+          background: {
+            // color: {
+            //   value: "#0d47a1",
+            // },
+          },
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 150,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 120,
+              enable: true,
+              opacity: 0.6,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 1,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 1200,
+              },
+              value: 100,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 2 },
+            },
+          },
+          detectRetina: true,
+        };
+
+
+---
+<div class="absolute">
+    <script>
+        import { type Container, type Engine } from "tsparticles-engine";
+        import { loadFull } from "../../node_modules/tsparticles";
+        window.particlesInit = async (engine: Engine) => {
+            await loadFull(engine);
+        };
+        window.particlesLoaded = function (container: Container) {};
+    </script>
+    <Particles id="tsparticles" options={options} init="particlesInit" loaded="particlesLoaded" />
+</div>

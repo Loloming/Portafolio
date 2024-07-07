@@ -6,6 +6,10 @@ interface Props {
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 import ParticleBackground from "../components/ParticleBackground.astro";
+import { getImage } from "astro:assets";
+import myImage from "../../public/background_pattern.png";
+
+const backgroundImage = await getImage({ src: myImage });
 
 const { title } = Astro.props;
 ---
@@ -21,6 +25,11 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div
+			style={`background-image: url('${backgroundImage.src}')`}
+			class="background-image"
+		>
+		</div>
 		<ParticleBackground />
 		<Header />
 		<slot />
@@ -29,17 +38,18 @@ const { title } = Astro.props;
 <style is:global>
 	:root {
 		color-scheme: light dark;
-		/* height: 100%; */
 	}
 	html {
 		font-family: system-ui, sans-serif;
 	}
 	body {
 		display: flex;
+		position: relative;
 		flex-direction: column;
 		overflow-x: hidden;
 		margin: 0 auto;
 		width: 100%;
+		min-height: 100%;
 		background-repeat: no-repeat;
 		background-color: #6c0093;
 		background: -moz-linear-gradient(
@@ -64,5 +74,19 @@ const { title } = Astro.props;
 			rgba(41, 10, 65, 1) 100%
 		);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#100020",endColorstr="#290a41",GradientType=1);
+	}
+	.background-image {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		/* background-image: url("${optimizedBackgroundImage.src}"); */
+		background-position: center;
+		background-size: cover;
+		background-repeat: repeat;
+		opacity: 0.08; /* Opacidad de la imagen de fondo */
+		z-index: -50; /* Colocar la imagen detrás de todo */
 	}
 </style>

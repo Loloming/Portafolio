@@ -3,29 +3,56 @@ import Layout from "../layouts/Layout.astro";
 import Presentation from "../components/Presentation.astro";
 import ImageContainer from "../components/ImageContainer.astro";
 import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
 import "@fontsource-variable/exo";
 import "@fontsource-variable/pixelify-sans";
+import { getImage } from "astro:assets";
+import myImage from "../../public/background_pattern.png";
+
+const backgroundImage = await getImage({ src: myImage });
 ---
 
 <Layout title="Damian Bruzzoni">
   <main class="pt-16">
+    <div
+      style={`background-image: url('${backgroundImage.src}')`}
+      class="background-image"
+    >
+    </div>
     <Presentation />
     <ImageContainer />
     <About />
+    <Projects />
   </main>
 </Layout>
 <style>
   main {
     display: grid;
-    max-width: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
     grid-template-columns: 1fr 1fr 0.7fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "Presentation Presentation Image"
       "About About Image"
-      "About About Image";
-    /* "Projects Projects Projects" */
+      "About About Image"
+      "Projects Projects Projects";
     /* "Contact Contact Contact"; */
+  }
+  .background-image {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    /* background-image: url("${optimizedBackgroundImage.src}"); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    opacity: 0.08; /* Opacidad de la imagen de fondo */
+    z-index: -50; /* Colocar la imagen detrás de todo */
   }
 </style>

@@ -29,6 +29,7 @@ const { title } = Astro.props;
 <style is:global>
 	:root {
 		color-scheme: light dark;
+		/* height: 100%; */
 	}
 	html {
 		font-family: system-ui, sans-serif;
@@ -38,8 +39,8 @@ const { title } = Astro.props;
 		flex-direction: column;
 		overflow-x: hidden;
 		margin: 0 auto;
-		height: 100%;
 		width: 100%;
+		background-repeat: no-repeat;
 		background-color: #6c0093;
 		background: -moz-linear-gradient(
 			142deg,
@@ -63,19 +64,5 @@ const { title } = Astro.props;
 			rgba(41, 10, 65, 1) 100%
 		);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#100020",endColorstr="#290a41",GradientType=1);
-	}
-	body::before {
-		content: "";
-		background-image: url("/background_pattern.png");
-		background-position: center;
-		background-size: cover;
-		background-repeat: repeat;
-		min-height: 100%;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		opacity: 0.08;
 	}
 </style>

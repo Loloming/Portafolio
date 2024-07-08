@@ -1,6 +1,7 @@
 ---
 import hh from "../assets/projects/hhh.webp";
 import sphere from "../assets/projects/Sphere.webp";
+import SectionInfo from "./SectionInfo.astro";
 
 const projects = [
     {
@@ -31,16 +32,12 @@ const projects = [
     },
 ];
 
-import Project from "../components/Project.astro";
+import Project from "./Project.astro";
 ---
 
-<section id="projects" class="w-full mb-4">
-    <section
-        class="flex justify-center mx-auto mb-8 bg-gradient-to-b from-slate-50/10 to-fuchsia-400/20 backdrop-blur-[2px] w-3/4 h-min rounded-3xl"
-    >
-        <h2 class="text-3xl text-white">Projects</h2>
-    </section>
-    <div class="flex flex-col gap-3 items-center">
+<section id="projects" class="h-full flex flex-col gap-8">
+    <SectionInfo content="Projects" />
+    <div class="flex flex-col gap-4 items-center">
         {projects.map((p) => <Project {...p} />)}
     </div>
 </section>

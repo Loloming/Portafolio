@@ -3,32 +3,30 @@ import Layout from "../layouts/Layout.astro";
 import Presentation from "../components/Presentation.astro";
 import ImageContainer from "../components/ImageContainer.astro";
 import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
 import "@fontsource-variable/exo";
 import "@fontsource-variable/pixelify-sans";
 ---
 
 <Layout title="Damian Bruzzoni">
-  <main class="pt-16">
+  <main class="pt-14">
     <Presentation />
     <ImageContainer />
-    <About />
-    <Projects />
+    <About transition:name="section-info" />
   </main>
 </Layout>
 <style>
+  body {
+    margin: auto;
+  }
   main {
     display: grid;
     width: 100%;
     min-height: 100%;
     grid-template-columns: 1fr 1fr 0.7fr;
-    grid-template-rows: 1fr 0.8fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "Presentation Presentation Image"
       "About About Image"
-      "About About Image"
-      "Projects Projects Projects";
-    /* "Contact Contact Contact"; */
+      "About About Image";
   }
 </style>

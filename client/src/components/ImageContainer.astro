@@ -6,16 +6,21 @@ import { Image } from "astro:assets";
 <aside
     class="flex flex-col items-center pt-3 h-min w-full rounded-l-2xl border-l border-b border-fuchsia-500/10 backdrop-blur-[1px] bg-gradient-to-r from-transparent to-fuchsia-500/20"
 >
-    <Image loading="eager" src={myImage} alt="Profile pic" />
+    <Image
+        class="border-2 border-fuchsia-500/50"
+        loading="eager"
+        src={myImage}
+        alt="Profile pic"
+    />
     <div
         class="flex flex-row justify-center gap-12 w-full m-2 bg-gradient-to-r from-transparent via-fuchsia-500/10 to-transparent"
     >
         <a
             href="https://github.com/Loloming"
-            class="transition ease-in-out delay-100 hover:-translate-y-[2px]"
+            class="transition ease-in-out hover:-translate-y-[2px]"
         >
             <svg
-                class="size-12"
+                class="size-10"
                 fill="#fff"
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -30,10 +35,10 @@ import { Image } from "astro:assets";
         </a>
         <a
             href="https://www.linkedin.com/in/damian-bruzzoni/"
-            class="transition ease-in-out delay-100 hover:-translate-y-[2px]"
+            class="transition ease-in-out hover:-translate-y-[2px]"
         >
             <svg
-                class="size-12"
+                class="size-10"
                 fill="#fff"
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -48,10 +53,10 @@ import { Image } from "astro:assets";
         </a>
         <a
             href="mailto:damianbruzzoni@gmail.com"
-            class="transition ease-in-out delay-100 hover:-translate-y-[2px]"
+            class="transition ease-in-out hover:-translate-y-[2px]"
         >
             <svg
-                class="size-12"
+                class="size-10"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,8 +78,8 @@ import { Image } from "astro:assets";
     }
     img {
         border-radius: 100%;
-        width: 18rem;
-        height: 18rem;
+        width: 15rem;
+        height: 15rem;
         object-fit: cover;
     }
 </style>

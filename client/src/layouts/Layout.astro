@@ -5,6 +5,7 @@ interface Props {
 
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import ParticleBackground from "../components/ParticleBackground.astro";
 import { getImage } from "astro:assets";
 import myImage from "../../public/background_pattern.png";
@@ -33,6 +34,7 @@ const { title } = Astro.props;
 		<ParticleBackground />
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -41,6 +43,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
 	body {
 		display: flex;
@@ -69,9 +72,9 @@ const { title } = Astro.props;
 		background: linear-gradient(
 			142deg,
 			rgba(16, 0, 32, 1) 0%,
-			rgba(91, 1, 131, 1) 28%,
-			rgba(24, 3, 40, 0.9523459896653974) 43%,
-			rgba(41, 10, 65, 1) 100%
+			rgb(72, 2, 102) 28%,
+			rgb(24, 3, 40) 43%,
+			rgb(52, 13, 83) 100%
 		);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#100020",endColorstr="#290a41",GradientType=1);
 	}
@@ -88,5 +91,11 @@ const { title } = Astro.props;
 		background-repeat: repeat;
 		opacity: 0.08; /* Opacidad de la imagen de fondo */
 		z-index: -50; /* Colocar la imagen detrás de todo */
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>

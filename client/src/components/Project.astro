@@ -1,0 +1,63 @@
+---
+interface Props {
+    name: string;
+    description: string;
+    images: any;
+    techs: string[];
+    code: string;
+    demo: string;
+}
+
+import { Image } from "astro:assets";
+
+const { name, description, images, techs, code, demo } = Astro.props;
+---
+
+<article
+    class="flex flex-row w-3/4 h-40 rounded-md border-l border-t border-r border-fuchsia-500/20 bg-gradient-to-br from-transparent via-violet-950/10 to-fuchsia-600/20 backdrop-blur-[2px]"
+>
+    <Image
+        src={images}
+        loading="eager"
+        alt=`Screenshot of my project ${name}`
+    />
+    <div class="flex flex-wrap w-full h-40">
+        <div class="flex flex-col w-full text-pretty mt-2 gap-1">
+            <h5 class="mr-auto h-min text-lg">{name}</h5>
+            <p class="text-sm">{description}</p>
+        </div>
+        <div class="flex flex-row justify-start w-full">
+            <ul class="flex flex-row flex-wrap justify-start gap-1 w-3/4 mb-1">
+                {
+                    techs.map((t) => {
+                        return (
+                            <li class="text-sm text-amber-200 p-1 h-min rounded-xl bg-gradient-to-br from-slate-500/10 to-fuchsia-500/20">
+                                {t}
+                            </li>
+                        );
+                    })
+                }
+            </ul>
+            <div
+                class="flex flex-row text-white/50 justify-center gap-3 w-[25%]"
+            >
+                <a href={code}>Code</a>
+                {demo && <a href={demo}>Demo</a>}
+            </div>
+        </div>
+    </div>
+</article>
+<style>
+    img {
+        height: 100%;
+        width: 35%;
+        object-fit: cover;
+        border-radius: 0.375rem;
+        margin-right: 1rem;
+    }
+    article {
+        font-family: "Onest Variable", sans-serif;
+    }
+    a {
+    }
+</style>

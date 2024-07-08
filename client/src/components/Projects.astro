@@ -1,25 +1,54 @@
-<section class="w-full h-full">
-    <div>
-        <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-            perspiciatis animi non deserunt aliquam quisquam inventore sed,
-            ullam cum atque maxime quam necessitatibus modi recusandae suscipit
-            ipsam doloremque unde eius!
-        </h2>
-        <h3>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Accusantium deleniti illum magnam iure dolore quia, vitae minima
-            temporibus quam consequatur praesentium harum, assumenda suscipit
-            nulla, tenetur repellendus ipsa illo? Perspiciatis. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Perferendis, pariatur
-            odit saepe enim est earum corporis quasi quam nam ullam architecto
-            consectetur voluptas officiis laborum error eligendi consequatur
-            animi aspernatur?
-        </h3>
+---
+import hh from "../assets/projects/hhh.webp";
+import sphere from "../assets/projects/Sphere.webp";
+
+const projects = [
+    {
+        name: "Happy Hour Helper",
+        description:
+            "Liquor ecommerce web app, with many products built using forms that dispatch functions onto the backend and that connect with the database, with an integrated admin dashboard that allows the information from the website to be manipulated without any code knowledge.",
+        images: hh,
+        techs: ["React", "Node.js", "Sequelize", "Redux", "MaterialUI"],
+        code: "https://github.com/RetriveAgustin/Happy-Hour-Helper",
+        demo: "https://www.linkedin.com/feed/update/urn:li:activity:7031695345189273600?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7031695345189273600%29",
+    },
+    {
+        name: "Sphere",
+        description:
+            "Social media web app, with users and chats in real time. Using Socket.io and WebRTC to call and chat functions. Also has posts with images, videos, and audio. Same with comments and replies. Work in progress.",
+        images: sphere,
+        techs: [
+            "React",
+            "Node.js",
+            "Sequelize",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Socket.io",
+            "WebRTC",
+        ],
+        code: "https://github.com/Loloming/Sphere",
+        demo: null,
+    },
+];
+
+import Project from "../components/Project.astro";
+---
+
+<section id="projects" class="w-full mb-4">
+    <section
+        class="flex justify-center mx-auto mb-8 bg-gradient-to-b from-slate-50/10 to-fuchsia-400/20 backdrop-blur-[2px] w-3/4 h-min rounded-3xl"
+    >
+        <h2 class="text-3xl text-white">Projects</h2>
+    </section>
+    <div class="flex flex-col gap-3 items-center">
+        {projects.map((p) => <Project {...p} />)}
     </div>
 </section>
 <style>
-    section {
+    #projects {
         grid-area: Projects;
+    }
+    h2 {
+        font-family: "Pixelify Sans Variable", system-ui;
     }
 </style>

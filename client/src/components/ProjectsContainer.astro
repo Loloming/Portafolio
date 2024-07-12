@@ -9,7 +9,7 @@ const projects = [
         description:
             "Liquor ecommerce web app, with many products built using forms that dispatch functions onto the backend and that connect with the database, with an integrated admin dashboard that allows the information from the website to be manipulated without any code knowledge.",
         images: hh,
-        techs: ["React", "Node.js", "Sequelize", "Redux", "MaterialUI"],
+        techs: ["ReactJS", "Node.js", "Sequelize", "Redux", "MaterialUI"],
         code: "https://github.com/RetriveAgustin/Happy-Hour-Helper",
         demo: "https://www.linkedin.com/feed/update/urn:li:activity:7031695345189273600?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7031695345189273600%29",
     },
@@ -19,7 +19,7 @@ const projects = [
             "Social media web app, with users and chats in real time. Using Socket.io and WebRTC to call and chat functions. Also has posts with images, videos, and audio. Same with comments and replies. Work in progress.",
         images: sphere,
         techs: [
-            "React",
+            "ReactJS",
             "Node.js",
             "Sequelize",
             "Redux Toolkit",
@@ -32,13 +32,17 @@ const projects = [
     },
 ];
 
-import Project from "./Project.astro";
+import Project from "./Project.jsx";
 ---
 
 <section id="projects" class="h-full flex flex-col gap-8">
     <SectionInfo content="Projects" />
     <div class="flex flex-col gap-4 items-center">
-        {projects.map((p) => <Project {...p} />)}
+        {
+            projects.map((p) => (
+                <Project client:idle before-hydration-url="/" {...p} />
+            ))
+        }
     </div>
 </section>
 <style>

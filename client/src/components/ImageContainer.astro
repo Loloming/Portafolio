@@ -4,10 +4,10 @@ import { Image } from "astro:assets";
 ---
 
 <aside
-    class="flex flex-col items-center pt-3 h-min w-full rounded-l-2xl border-l border-b border-fuchsia-500/10 backdrop-blur-[1px] bg-gradient-to-r from-transparent to-fuchsia-500/20"
+    class="flex flex-col items-center pt-3 h-min xl:w-full rounded-l-2xl border-l border-b border-fuchsia-500/10 backdrop-blur-[1px] lg:bg-gradient-to-r lg:from-transparent lg:to-fuchsia-500/20"
 >
     <Image
-        class="border-2 border-fuchsia-500/50 bg-fuchsia-500/10"
+        class="border-2 border-fuchsia-500/50 bg-fuchsia-500/10 rounded-full object-cover 2xl:size-[28rem] xl:size-[15rem] lg:size-[13rem] md:size-[20rem] size-[11rem]"
         loading="eager"
         src={myImage}
         alt="Profile pic"
@@ -20,7 +20,7 @@ import { Image } from "astro:assets";
             class="transition ease-in-out hover:-translate-y-[2px]"
         >
             <svg
-                class="size-10"
+                class="2xl:size-16 xl:size-10 lg:size-9 md:size-12 size-7"
                 fill="#fff"
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -38,7 +38,7 @@ import { Image } from "astro:assets";
             class="transition ease-in-out hover:-translate-y-[2px]"
         >
             <svg
-                class="size-10"
+                class="2xl:size-16 xl:size-10 lg:size-9 md:size-12 size-7"
                 fill="#fff"
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -56,7 +56,7 @@ import { Image } from "astro:assets";
             class="transition ease-in-out hover:-translate-y-[2px]"
         >
             <svg
-                class="size-10"
+                class="2xl:size-16 xl:size-10 lg:size-9 md:size-12 size-7"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,11 +75,5 @@ import { Image } from "astro:assets";
 <style>
     aside {
         grid-area: Image;
-    }
-    img {
-        border-radius: 100%;
-        width: 15rem;
-        height: 15rem;
-        object-fit: cover;
     }
 </style>

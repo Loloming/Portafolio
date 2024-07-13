@@ -1,9 +1,13 @@
 <article
-    class="relative bg-gradient-to-b from-white/5 to-fuchsia-600/80 h-min w-full ml-10 p-3 pb-2 border-l border-fuchsia-200/40 shadow-2xl z-40"
+    class="relative md:bg-gradient-to-b md:from-white/5 md:to-fuchsia-600/80 bg-gradient-to-b from-white/5 via-fuchsia-600/80 to-transparent h-min xl:w-full w-[95%] mx-auto xl:ml-10 p-3 pb-2 border-l border-fuchsia-200/40 shadow-2xl z-40"
 >
-    <h1 class="text-5xl font-semibold pl-3 z-50">Hey, i'm Damian Bruzzoni.</h1>
+    <h1
+        class="2xl:text-8xl xl:text-5xl lg:text-4xl md:text-6xl text-2xl font-semibold pl-3 z-50"
+    >
+        Hey, i'm Damian Bruzzoni.
+    </h1>
     <h2
-        class="p-3 class font-medium text-2xl text-amber-200 bg-gradient-to-b from-bg-black to-transparent"
+        class="p-3 class font-medium 2xl:text-5xl xl:text-xl lg:text-xl md:text-3xl text-base text-amber-200 bg-gradient-to-b from-bg-black to-transparent"
     >
         Full-stack Web Developer. From Argentina, Buenos Aires.<br /> Specializing
         in creating unique apps, focused on<br /> continuous improvement every day.
@@ -26,5 +30,11 @@
         -webkit-mask: var(--mask);
         mask: var(--mask);
         grid-area: Presentation;
+    }
+    @media only screen and (max-width: 576px) {
+        article {
+            --mask: none;
+            grid-area: Presentation;
+        }
     }
 </style>

@@ -8,21 +8,23 @@ Astro.request.url.includes("projects") ? (projects = true) : false;
 >
     <nav class="flex justify-evenly w-full">
         <a
+            data-astro-transition="forward"
             class="bg-transparent h-14 w-full transition-colors ease-in-out duration-500 hover:bg-gradient-to-r from-transparent via-white/5 to-transparent border-r border-gray-300/10 shadow-2xl"
             href="/"
         >
             <div
-                class={`${!projects && "text-white/70"} text-base flex flex-column justify-center items-center h-full w-full transition ease-in-out delay-100 hover:scale-110`}
+                class={`${!projects && "text-white/70"} lg:text-base text-sm flex flex-column justify-center items-center h-full w-full transition ease-in-out delay-100 hover:scale-110`}
             >
                 Home
             </div>
         </a>
         <a
+            data-astro-transition="back"
             class="bg-transparent h-14 w-full transition-colors ease-in-out duration-500 hover:bg-gradient-to-r from-transparent via-white/5 to-transparent border-r border-gray-300/10 shadow-2xl"
             href="/projects"
         >
             <div
-                class={`${projects && "text-white/70"} text-base flex flex-column justify-center items-center h-full w-full transition ease-in-out delay-100 hover:scale-110`}
+                class={`${projects && "text-white/70"} lg:text-base text-sm flex flex-column justify-center items-center h-full w-full transition ease-in-out delay-100 hover:scale-110`}
             >
                 Projects
             </div>

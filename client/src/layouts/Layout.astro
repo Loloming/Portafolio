@@ -8,10 +8,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ParticleBackground from "../components/ParticleBackground.astro";
 import { getImage } from "astro:assets";
-import { ViewTransitions } from "astro:transitions";
+import { slide, ViewTransitions } from "astro:transitions";
 import myImage from "../../public/background_pattern.png";
 
 const backgroundImage = await getImage({ src: myImage });
+
+let url = Astro.request.url;
 
 const { title } = Astro.props;
 ---
@@ -35,7 +37,17 @@ const { title } = Astro.props;
 		</div>
 		<ParticleBackground />
 		<Header />
-		<div class="flex min-h-screen" transition:animate="initial">
+		<div
+			class="flex min-h-screen"
+			transition:animate={slide({ duration: "0.8s" })}
+		>
+			<script>
+				document.addEventListener("astro:before-preparation", (ev) => {
+					ev.direction = ev.from.href.includes("projects")
+						? "back"
+						: "forwards";
+				});
+			</script>
 			<slot />
 		</div>
 		<Footer />

@@ -8,9 +8,7 @@ import "@fontsource-variable/pixelify-sans";
 ---
 
 <Layout title="Damian Bruzzoni">
-  <main
-    class="grid w-full md:content-center grid-cols-3 2xl:py-24 2xl:gap-32 xl:gap-12 lg:gap-0 md:gap-16 py-14 my-3"
-  >
+  <main class="grid w-full content-center grid-cols-3 py-14 my-3">
     <Presentation />
     <ImageContainer />
     <About transition:name="section-info" />
@@ -19,27 +17,21 @@ import "@fontsource-variable/pixelify-sans";
 <style>
   ::root {
     width: 100%;
+    min-height: 100vh;
   }
   main {
     grid-template-areas:
       "Presentation Presentation Image"
       "About About Image"
       "About About Image";
+    gap: 0px 0px;
   }
   @media only screen and (max-width: 1023px) {
-    ::root {
-      width: 100%;
-      min-height: 100vh;
-    }
     main {
-      min-width: 100%;
       grid-template-areas:
         "Presentation Presentation Presentation"
         "Image Image Image"
         "About About About";
-    }
-    body {
-      min-width: 100vw;
     }
   }
 </style>

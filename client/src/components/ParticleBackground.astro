@@ -76,7 +76,7 @@ const options: ISourceOptions = {
 };
 ---
 
-<div class="absolute">
+<div class="hidden">
   <script>
     import { type Container, type Engine } from "tsparticles-engine";
     import { loadFull } from "../../node_modules/tsparticles";
@@ -86,8 +86,8 @@ const options: ISourceOptions = {
     window.particlesLoaded = function (container: Container) {};
   </script>
   <Particles
-    id="tsparticles"
     options={options}
+    id="tsparticles"
     init="particlesInit"
     loaded="particlesLoaded"
   />

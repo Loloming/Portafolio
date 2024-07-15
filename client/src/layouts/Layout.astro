@@ -20,9 +20,12 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta
+			name="description"
+			content="Damian Bruzzoni | Full-Stack Web Developer | Developing sophisticated solutions"
+		/>
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/damnB.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
@@ -34,7 +37,7 @@ const { title } = Astro.props;
 			class="background-image"
 		>
 		</div>
-		<Header />
+		<Header transition:persist />
 		<div
 			class="flex min-h-screen"
 			transition:animate={slide({ duration: "0.8s" })}
@@ -65,7 +68,7 @@ const { title } = Astro.props;
 				margin: 0 auto;
 				width: 100%;
 				min-height: 100vh;
-				background-repeat: no-repeat;
+				background-repeat: repeat;
 				background-color: #6c0093;
 				background: -moz-linear-gradient(
 					142deg,
@@ -91,7 +94,7 @@ const { title } = Astro.props;
 				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#100020",endColorstr="#290a41",GradientType=1);
 			}
 			.background-image {
-				position: absolute;
+				position: fixed;
 				content: "";
 				top: 0;
 				left: 0;

@@ -20,8 +20,8 @@ export default function Project({name, description, images, techs, code, demo}) 
         </div>
         <div class="flex flex-col lg:gap-0 lg:p-0 gap-2 p-2 justify-evenly flex-wrap w-full h-full">
             <div class="flex flex-col w-full text-pretty gap-2">
-                <h5 class="lg:mr-auto lg:mx-0 mx-auto xl:text-xl text-base font-onest font-medium">{name}</h5>
-                <p class="lg:text-base md:text-sm md:px-0 text-xs px-2">
+                <h5 class="lg:mr-auto lg:mx-0 mx-auto xl:text-xl text-base font-onest text-white font-medium">{name}</h5>
+                <p class="lg:text-base md:text-sm md:px-0 text-white text-xs px-2">
                     {
                         (description && description) || (
                             <div class="animate-pulse bg-fuchsia-600/20 w-full h-[.8rem] rounded-full" />
